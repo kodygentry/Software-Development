@@ -1,0 +1,34 @@
+html {
+    font-size: 15pt;
+    line-spacing: 1.4;
+}
+main {
+    max-width: 40em;
+    margin: 0 auto;
+}
+#board {
+    /* this merges adjacent cell borders! */
+    border-collapse: collapse;
+}
+#board .cell {
+    /* big letters */
+    font-family: "Avant Garde", sans-serif;
+    font-size: 40px;
+    /* center the letters */
+    text-align: center;
+    vertical-align: middle;
+    /* make the cells nice and big */
+    width: 64px;
+    height: 64px;
+    border: solid 1px black;
+    /* empty cells are pointerable */
+    cursor: pointer;
+}
+
+#board .cell.x, #board .cell.o {
+    /* used cells have not-allowed */
+    cursor: not-allowed;
+}
+#board .cell.winning {
+    background-color: green;
+}
